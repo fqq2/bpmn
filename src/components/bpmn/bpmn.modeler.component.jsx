@@ -8,9 +8,9 @@ import propertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/camu
 import camundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda';
 
 class BpmnModelerComponent extends Component {
-    
+
     modeler = null;
-    
+
     componentDidMount = () => {
         this.modeler = new BpmnModeler({
             container: '#bpmnview',
@@ -51,8 +51,11 @@ class BpmnModelerComponent extends Component {
     render = () => {
         return(
             <div id="bpmncontainer">
-                <div id="propview" style={{ width: '25%', height: '98vh', float: 'right', maxHeight: '98vh', overflowX: 'auto' }}></div>
-                <div id="bpmnview" style={{ width: '75%', height: '98vh', float: 'left' }}></div>
+                <div className="d-flex flex-row-reverse bd-highlight p-3"><button className="btn btn-outline-danger">Logout</button></div>
+                <div className="clearfix">
+                    <div id="propview" style={{ width: '25%', height: '98vh', float: 'right', maxHeight: '98vh', overflowX: 'auto' }}></div>
+                    <div id="bpmnview" style={{ width: '75%', height: '98vh', float: 'left' }}></div>
+                </div>
             </div>
         )
     }
